@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="numeric">
+  <info>
+    <title>Numbered Citation Style with Bold Volume</title>
+    <id>numbered-citation-style-bold-volume</id>
+    <updated>2024-10-30T04:59:21+00:00</updated>
+  </info>
+
+  <!-- 인용 스타일 -->
+  <citation>
+    <layout prefix="[" suffix="]" delimiter=" ">
+      <text variable="citation-number" suffix="."/>
+    </layout>
+  </citation>
+
+  <!-- 참고문헌 스타일 -->
+  <bibliography>
+    <layout>
+      <group delimiter=" ">
+        <!-- 숫자 붙이기 -->
+        <text variable="citation-number" prefix="[" suffix="] "/>
+        <!-- 저자 표시 -->
+        <names variable="author">
+          <name form="long" and="text" delimiter=", " initialize-with=". "/>
+        </names>
+        <!-- 저널명 -->
+        <text variable="container-title" prefix=", " suffix=", "/>
+        <!-- 권(volume)을 볼드체로 표시 -->
+        <text variable="volume" font-weight="bold" suffix=" "/>
+        <!-- 페이지가 있는 경우 페이지 표시, 없는 경우 표시 안함 -->
+        <text variable="page" prefix=", " suffix=" "/>
+        <!-- 연도(year) -->
+        <group prefix="(" suffix=")." delimiter="">
+          <date variable="issued">
+            <date-part name="year"/>
+          </date>
+        </group>
+      </group>
+    </layout>
+  </bibliography>
+</style>
